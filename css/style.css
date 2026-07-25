@@ -90,8 +90,8 @@ h1,h2,h3{ margin:0; }
   padding:12px 24px;
 }
 .brand{ display:flex; align-items:center; gap:10px; }
-.brand-mark{ width:44px; height:44px; flex-shrink:0; }
-.brand-mark.small{ width:34px; height:34px; }
+.brand-mark{ width:44px; height:44px; flex-shrink:0; object-fit:cover; border-radius:10px; }
+.brand-mark.small{ width:34px; height:34px; border-radius:8px; }
 .brand-text{
   font-family:var(--display);
   font-size:1.35rem;
@@ -154,6 +154,20 @@ h1,h2,h3{ margin:0; }
   background-image:radial-gradient(var(--cream) 1px, transparent 1px);
   background-size:3px 3px;
   pointer-events:none;
+}
+.hero-logo-bg{
+  position:absolute;
+  top:50%; right:-6%;
+  width:min(52vw, 620px);
+  height:auto;
+  transform:translateY(-50%) rotate(8deg);
+  opacity:.14;
+  filter:grayscale(1) brightness(1.4);
+  pointer-events:none;
+  user-select:none;
+}
+@media (max-width: 900px){
+  .hero-logo-bg{ width:80vw; right:-20%; opacity:.10; }
 }
 .hero-inner{ position:relative; text-align:center; }
 .hero-badges{
