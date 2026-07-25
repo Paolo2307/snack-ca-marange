@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snack Ça Marange — Kebab, Tacos, Burgers à Marange-Silvange</title>
+<meta name="description" content="Snack Ça Marange : kebabs, tacos, burgers et grillades halal à Marange-Silvange. Sur place, à emporter ou en livraison, ouvert du lundi au samedi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23d1342b%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23f6ecd9%22>🌯</text></svg>">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="38" fill="var(--red)"/>
+        <path d="M22 30c0-8 8-14 18-14s18 6 18 14" fill="none" stroke="var(--cream)" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="40" cy="40" rx="17" ry="16" fill="var(--cream)"/>
+        <circle cx="33" cy="38" r="3.4" fill="var(--ink)"/>
+        <circle cx="47" cy="38" r="3.4" fill="var(--ink)"/>
+        <path d="M31 48c3 3 15 3 18 0" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M22 27c6-6 30-6 36 0" stroke="var(--yellow)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M18 60l8-8M22 64l10-10M26 68l10-10" stroke="var(--cream)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M62 60l-8-8M58 64l-10-10M54 68l-10-10" stroke="var(--cream)" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Snack <em>Ça Marange</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">Menu</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#infos">Infos &amp; Horaires</a>
+      <a href="tel:0387806296" class="btn btn-call">📞 03.87.80.62.96</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-badges">
+      <span class="badge">☪ Halal</span>
+      <span class="badge">🛵 Livraison</span>
+      <span class="badge">🥡 À emporter</span>
+    </div>
+    <h1 class="hero-title">ÇA GRILLE<br>À <span>MARANGE</span></h1>
+    <p class="hero-sub">Kebabs, tacos, burgers &amp; grillades faits maison — sur place, à emporter ou livrés chez vous à Marange-Silvange.</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-primary">Voir le menu</a>
+      <a href="tel:0387806296" class="btn btn-outline">Commander : 03.87.80.62.96</a>
+    </div>
+    <div class="hero-hours">
+      <strong>Ouvert du lundi au samedi</strong> · 11h30–14h00 &amp; 17h30–22h30
+    </div>
+  </div>
+</section>
+
+<div class="grill-divider" aria-hidden="true"></div>
+
+<!-- ===== MENU ===== -->
+<section id="menu" class="section">
+  <div class="wrap">
+    <p class="eyebrow">La carte</p>
+    <h2 class="section-title">Un menu qui a du <span>goût</span></h2>
+
+    <div class="menu-tabs" id="menuTabs" role="tablist">
+      <button class="tab-btn active" data-tab="sandwichs">Sandwichs</button>
+      <button class="tab-btn" data-tab="double">Double</button>
+      <button class="tab-btn" data-tab="tacos">Tacos</button>
+      <button class="tab-btn" data-tab="assiettes">Assiettes</button>
+      <button class="tab-btn" data-tab="burgers">Burgers</button>
+      <button class="tab-btn" data-tab="accompagnements">Accompagnements</button>
+      <button class="tab-btn" data-tab="barquettes">Barquettes</button>
+      <button class="tab-btn" data-tab="salades">Salades</button>
+      <button class="tab-btn" data-tab="desserts">Desserts</button>
+      <button class="tab-btn" data-tab="boissons">Boissons</button>
+      <button class="tab-btn" data-tab="enfant">Menu enfant</button>
+    </div>
+
+    <div class="menu-panels" id="menuPanels">
+
+      <div class="menu-panel active" data-panel="sandwichs">
+        <ul class="menu-list" id="list-sandwichs"></ul>
+        <p class="menu-note">Existe aussi en <strong>Durum</strong>, <strong>Wrap Tenders</strong> et <strong>Lahmacun</strong> — voir en bas de liste.</p>
+      </div>
+
+      <div class="menu-panel" data-panel="double">
+        <p class="menu-note top">Toutes nos formules Sandwichs existent en version <strong>Double</strong> (double portion de viande).</p>
+        <ul class="menu-list" id="list-double"></ul>
+      </div>
+
+      <div class="menu-panel" data-panel="tacos">
+        <div class="tacos-grid">
+          <div class="tacos-prices">
+            <h3>Formats</h3>
+            <ul class="menu-list">
+              <li><span>1 viande</span><b>8,00€</b></li>
+              <li><span>Double — 1 viande</span><b>10,50€</b></li>
+              <li><span>Double — 2 viandes</span><b>11,50€</b></li>
+              <li><span>3 viandes</span><b>13,00€</b></li>
+            </ul>
+          </div>
+          <div class="tacos-choices">
+            <h3>Viandes au choix</h3>
+            <p>Kebab · Poulet · Tenders · Nuggets · Steak · Saucisse turc · Cordon bleu · Köfte</p>
+            <h3>Sauces au choix</h3>
+            <p>Blanche · Andalouse · Algérienne · Samouraï · Mayonnaise · Ketchup · Harissa · Curry · Barbecue</p>
+            <h3>Extra fromage <span class="tag">+1,00€</span></h3>
+            <p>Cheddar · Mozzarella · Feta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="assiettes">
+        <ul class="menu-list" id="list-assiettes"></ul>
+      </div>
+
+      <div class="menu-panel" data-panel="burgers">
+        <ul class="menu-list" id="list-burgers"></ul>
+        <div class="highlight-card">
+          <span class="highlight-tag">Signature</span>
+          <h3>Tasty Crousty</h3>
+          <p>Notre bol gourmand croustillant, généreux et fait maison.</p>
+          <b>9,00€</b>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="accompagnements">
+        <div class="accomp-grid">
+          <div>
+            <h3>Tenders</h3>
+            <ul class="menu-list">
+              <li><span>4 pièces</span><b>6,50€</b></li>
+              <li><span>6 pièces</span><b>10,00€</b></li>
+              <li><span>9 pièces</span><b>13,00€</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Nuggets</h3>
+            <ul class="menu-list">
+              <li><span>6 pièces</span><b>6,00€</b></li>
+              <li><span>9 pièces</span><b>8,00€</b></li>
+              <li><span>12 pièces</span><b>10,00€</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Stick Mozza</h3>
+            <ul class="menu-list">
+              <li><span>6 pièces</span><b>7,00€</b></li>
+              <li><span>9 pièces</span><b>8,50€</b></li>
+              <li><span>12 pièces</span><b>9,50€</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Menu Tenders/Filets</h3>
+            <ul class="menu-list">
+              <li><span>2 personnes</span><b>19,00€</b></li>
+              <li><span>3 personnes</span><b>27,00€</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="barquettes">
+        <div class="accomp-grid three">
+          <div>
+            <h3>Frites</h3>
+            <ul class="menu-list">
+              <li><span>Petite</span><b>3,00€</b></li>
+              <li><span>Grande</span><b>4,00€</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Bulgur</h3>
+            <ul class="menu-list">
+              <li><span>Petite</span><b>4,00€</b></li>
+              <li><span>Grande</span><b>5,00€</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Viandes</h3>
+            <ul class="menu-list">
+              <li><span>Petite</span><b>6,50€</b></li>
+              <li><span>Grande</span><b>8,50€</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="salades">
+        <ul class="menu-list" id="list-salades"></ul>
+      </div>
+
+      <div class="menu-panel" data-panel="desserts">
+        <ul class="menu-list" id="list-desserts"></ul>
+      </div>
+
+      <div class="menu-panel" data-panel="boissons">
+        <ul class="menu-list" id="list-boissons"></ul>
+      </div>
+
+      <div class="menu-panel" data-panel="enfant">
+        <div class="highlight-card kids">
+          <span class="highlight-tag">Petits gourmands</span>
+          <h3>Menu Enfant</h3>
+          <p>Kebab ou Nuggets + frites + Capri-Sun + jouet + ballon + sucette</p>
+          <b>7,50€</b>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="supplements">
+      <h3>Suppléments</h3>
+      <ul>
+        <li><span>Sauce</span><b>+1,00€</b></li>
+        <li><span>Fromage</span><b>+0,50€</b></li>
+        <li><span>Viande</span><b>+2,00€</b></li>
+        <li><span>Poivron</span><b>+1,00€</b></li>
+        <li><span>Œuf</span><b>+1,00€</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="grill-divider flip" aria-hidden="true"></div>
+
+<!-- ===== GALERIE ===== -->
+<section id="galerie" class="section alt">
+  <div class="wrap">
+    <p class="eyebrow">Fait maison, à la plancha</p>
+    <h2 class="section-title">Ça se voit sur la <span>photo</span></h2>
+    <div class="gallery">
+      <figure><img src="images/kebab-wrap.png" alt="Wrap kebab grillé à la plancha, coupé en deux, servi chez Snack Ça Marange" loading="lazy"></figure>
+      <figure><img src="images/burger.png" alt="Burger maison au pain noir avec cheddar fondu, servi avec un Fanta" loading="lazy"></figure>
+      <figure class="poster"><img src="images/poster.png" alt="Affiche Snack Ça Marange avec adresse, horaires et coordonnées" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="grill-divider" aria-hidden="true"></div>
+
+<!-- ===== INFOS ===== -->
+<section id="infos" class="section">
+  <div class="wrap infos-grid">
+    <div class="infos-card">
+      <p class="eyebrow">Nous trouver</p>
+      <h2 class="section-title small">Infos &amp; <span>Horaires</span></h2>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Adresse</strong>
+            <p>ZAC de Jailly, rue des Alouettes<br>57535 Marange-Silvange</p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon">🕒</span>
+          <div>
+            <strong>Horaires</strong>
+            <p>Lundi – Samedi<br>11h30 – 14h00 · 17h30 – 22h30<br><em>Fermé le dimanche</em></p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon">📞</span>
+          <div>
+            <strong>Téléphone</strong>
+            <p><a href="tel:0387806296">03.87.80.62.96</a></p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon">🛵</span>
+          <div>
+            <strong>Livraison à domicile</strong>
+            <p>À partir de 20€ d'achat · frais 3€<br>Au-delà de 3km : frais de 4€</p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon">💳</span>
+          <div>
+            <strong>Paiement</strong>
+            <p>Espèces · CB · Ticket Restaurant · Apple Pay</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="social-row">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="btn btn-outline">Facebook : Snack Ça Marange</a>
+      </div>
+    </div>
+
+    <div class="infos-map">
+      <iframe
+        title="Carte Snack Ça Marange, ZAC de Jailly, rue des Alouettes, 57535 Marange-Silvange"
+        src="https://www.google.com/maps?q=ZAC+de+Jailly+rue+des+Alouettes+57535+Marange-Silvange&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="brand footer-brand">
+      <svg class="brand-mark small" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="38" fill="var(--yellow)"/>
+        <ellipse cx="40" cy="40" rx="17" ry="16" fill="var(--ink)"/>
+        <circle cx="33" cy="38" r="3.4" fill="var(--yellow)"/>
+        <circle cx="47" cy="38" r="3.4" fill="var(--yellow)"/>
+        <path d="M31 48c3 3 15 3 18 0" stroke="var(--yellow)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>Snack Ça Marange</span>
+    </div>
+    <p>ZAC de Jailly, rue des Alouettes — 57535 Marange-Silvange · 03.87.80.62.96</p>
+    <p class="footer-note">Halal · Sur place, à emporter ou en livraison · © <span id="year"></span> Snack Ça Marange</p>
+  </div>
+</footer>
+
+<a href="tel:0387806296" class="mobile-call-fab" aria-label="Appeler pour commander">📞</a>
+
+<script src="js/menu-data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
